@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список покупок</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="shopping-list">
+        <div class="input-container">
+          <input type="text" placeholder="Назва товару" id="product-name" />
+          <button id="add-button">Додати</button>
+        </div>
+        <ul id="product-list">
+          <li class="item">
+            <span class="product-name purchased">Помідори</span>
+            <span class="quantity">2</span>
+            <button class="status-button">Куплено</button>
+            <button class="delete-button">×</button>
+          </li>
+          <li class="item">
+            <span class="product-name">Печиво</span>
+            <button class="minus-button">−</button>
+            <span class="quantity">2</span>
+            <button class="plus-button">+</button>
+            <button class="status-button">Куплено</button>
+            <button class="delete-button">×</button>
+          </li>
+          <li class="item">
+            <input type="text" class="product-name" value="Сир" />
+            <button class="minus-button">−</button>
+            <span class="quantity">1</span>
+            <button class="plus-button">+</button>
+            <button class="status-button">Куплено</button>
+            <button class="delete-button">×</button>
+          </li>
+        </ul>
+      </div>
+      <div class="summary">
+        <div class="remaining">
+          <h3>Залишилося</h3>
+          <div class="remaining-item">
+            Печиво <span class="quantity">2</span>
+          </div>
+          <div class="remaining-item">Сир <span class="quantity">1</span></div>
+        </div>
+        <div class="purchased">
+          <h3>Куплено</h3>
+          <div class="purchased-item">
+            Помідори <span class="quantity">2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

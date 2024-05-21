@@ -1,0 +1,153 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #dadada;
+	margin: 0;
+	padding: 20px;
+}
+
+.container {
+	max-width: 800px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.shopping-list {
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex-grow: 2;
+	margin-right: 20px;
+	/* Відступ між двома блоками */
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	/* Відступ знизу, щоб відділити від списку */
+}
+
+#product-name {
+	flex-grow: 1;
+	/* Заповнює доступний простір */
+	padding: 10px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+#add-button {
+	padding: 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#add-button:hover {
+	background-color: #0056b3;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.product-name {
+	flex-grow: 0;
+}
+
+.product-name.purchased,
+.purchased-item {
+	text-decoration: line-through;
+}
+
+.quantity {
+	margin: 0 10px;
+}
+
+.plus-button,
+.minus-button,
+.status-button,
+.delete-button {
+	background-color: #e0e0e0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 5px 10px;
+	margin-left: 5px;
+	box-shadow: inset 0 15% 4px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: #ccc;
+}
+
+.minus-button {
+	background-color: #ff4d4d;
+	color: white;
+}
+
+.plus-button {
+	background-color: #28a745;
+	color: white;
+}
+
+.status-button {
+	background-color: #007bff;
+	color: white;
+}
+
+.delete-button {
+	background-color: #dc3545;
+	color: white;
+}
+
+.summary {
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex-basis: 250px;
+	/* Фіксована ширина для summary */
+}
+
+.summary h3 {
+	margin-top: 0;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+}
+
+.remaining-item,
+.purchased-item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 5px;
+	background-color: #f8f8f8;
+	border-radius: 4px;
+	position: relative;
+	/* Для абсолютного позиціонування псевдоелементів */
+}
+
+.remaining-item:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	/* Відступ від низу елементу */
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
