@@ -13,30 +13,32 @@
           <input type="text" placeholder="Назва товару" id="product-name" />
           <button id="add-button">Додати</button>
         </div>
-        <ul id="product-list">
-          <li class="item">
-            <span class="product-name purchased">Помідори</span>
+        <hr />
+        <ol id="product-list">
+          <div class="item-container">
+			<span class="product-noun" style="text-decoration: line-through;">Помідори</span>
             <span class="quantity">2</span>
-            <button class="status-button">Куплено</button>
-            <button class="delete-button">×</button>
-          </li>
-          <li class="item">
-            <span class="product-name">Печиво</span>
+            <button class="status-button">Не куплено</button>
+          </div>
+          <hr />
+          <div class="item-container">
+            <span class="product-noun">Печиво</span>
             <button class="minus-button">−</button>
             <span class="quantity">2</span>
             <button class="plus-button">+</button>
             <button class="status-button">Куплено</button>
             <button class="delete-button">×</button>
-          </li>
-          <li class="item">
-            <input type="text" class="product-name" value="Сир" />
-            <button class="minus-button">−</button>
+          </div>
+          <hr />
+          <div class="item-container">
+            <input type="text" class="entrering-product-noun" value="Сир" />
+            <button class="minus-button" data-faded="faded">−</button>
             <span class="quantity">1</span>
             <button class="plus-button">+</button>
             <button class="status-button">Куплено</button>
             <button class="delete-button">×</button>
-          </li>
-        </ul>
+          </div>
+        </ol>
       </div>
       <div class="summary">
         <div class="remaining">
