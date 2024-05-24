@@ -5,8 +5,22 @@ body {
 	padding: 20px;
 }
 
+.background {
+	display: block;
+	padding-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 990px;
+	max-width: 100%;
+}
+
 .container {
 	display: flex;
+}
+
+button {
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .shopping-list {
@@ -17,6 +31,7 @@ body {
 	flex-grow: 1;
 	margin-right: 20px;
 	border: 1px solid #ccc;
+	padding-bottom: 13px;
 }
 
 .input-container {
@@ -24,11 +39,12 @@ body {
 	display: flex;
 	align-items: center;
 	max-width: 100%;
+	margin-bottom: 16px;
 }
 
 #product-name {
 	flex-grow: 1;
-	padding: 8px;
+	padding: 10px;
 	margin-right: 0px;
 	border: 1px solid #ccc;
 	border-radius: 4px 0px 0px 4px;
@@ -38,7 +54,7 @@ body {
 #add-button {
 	font-weight: bold;
 	display: inline-block;
-	padding: 8.79999999px;
+	padding: 10.55px;
 	width: 100px;
 	background-color: #2285d0;
 	color: white;
@@ -46,14 +62,14 @@ body {
 	border-radius: 0px 3px 3px 0px;
 	cursor: pointer;
 	box-shadow: inset 0em -5px #2276b7;
+	user-select: text;
+	-webkit-user-select: text;
 }
-
-
 
 hr {
 	margin-left: -15px;
 	margin-right: -15px;
-	margin-top: 17px;
+	margin-top: 12px;
 	overflow: visible;
 	border: 0.5px solid #d4d4d4;
 }
@@ -62,6 +78,7 @@ hr {
 	list-style-type: none;
 	padding-left: 0px;
 	margin-bottom: 0px;
+	margin: auto;
 }
 
 .item-container {
@@ -70,9 +87,10 @@ hr {
 	justify-content: space-between;
 }
 
-.product-noun {
-	max-width: 164.267px;
-	width: 164.267px;
+.product-noun,
+.entering-product-noun {
+	box-sizing: border-box;
+	width: 20%;
 }
 
 .plus-button,
@@ -87,20 +105,26 @@ hr {
 	border: none;
 	border-radius: 50%;
 	color: white;
-	height: 25px;
-	width: 25px;
+	height: 30px;
+	width: 30px;
 	box-shadow: inset 0em -2.5px #bf2628;
 	font-family: Calibri;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: bold;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 }
 
-.minus-button:hover {
+.minus-button:hover,
+.delete-button:hover {
 	background-color: #ff0000;
 }
 
-[data-faded="faded"] {
+.minus-button:active,
+.delete-button:active {
+	background-color: #F50000;
+}
+
+[data-faded="red-faded"] {
 	background-color: #ef9e9e;
 	box-shadow: none;
 	pointer-events: none;
@@ -113,13 +137,13 @@ hr {
 	border: none;
 	border-radius: 50%;
 	color: white;
-	height: 25px;
-	width: 25px;
+	height: 30px;
+	width: 30px;
 	box-shadow: inset 0em -2.5px #21a340;
 	font-family: Arial;
-	font-size: 11.5px;
+	font-size: 16px;
 	font-weight: bold;
-	padding-bottom: 3px;
+	padding-bottom: 6px;
 }
 
 
@@ -127,11 +151,15 @@ hr {
 	background-color: #00ff00;
 }
 
+.plus-button:active {
+	background-color: #00E000;
+}
+
 .quantity {
 	width: 20px;
 	height: 20px;
 
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: bold;
 	font-family: Calibri;
 
@@ -144,9 +172,16 @@ hr {
 	border-radius: 4.5px;
 	background-color: #e8e8e8;
 
+	margin-left: 32px;
+	margin-right: 4px;
+	margin-top: -5px;
+}
+
+button+.quantity {
 	margin-left: 5px;
 	margin-right: 5px;
 }
+
 
 .status-button {
 	background-image: linear-gradient(#f7f7f7, #ececec);
@@ -155,12 +190,32 @@ hr {
 	font-weight: bold;
 	color: #646464;
 	padding: 21px;
-	padding-top: 8px;
-	padding-bottom: 9px;
-	
+	padding-top: 6.5px;
+	padding-bottom: 11.5px;
+
 	border: 0.5px solid #d4d4d4;
 	border-radius: 4px;
 	box-shadow: inset 0em -2.5px #c6c6c7;
+	user-select: text;
+	-webkit-user-select: text;
+}
+
+.not-status-button {
+	background-image: linear-gradient(#f7f7f7, #ececec);
+
+	font-family: Calibri;
+	font-weight: bold;
+	color: #646464;
+	padding: 21px;
+	padding-top: 6.5px;
+	padding-bottom: 11.5px;
+
+	border: 0.5px solid #d4d4d4;
+	border-radius: 4px;
+	box-shadow: inset 0em -2.5px #c6c6c7;
+	margin-left: 50px;
+	user-select: text;
+	-webkit-user-select: text;
 }
 
 .delete-button {
