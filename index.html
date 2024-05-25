@@ -7,60 +7,78 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="background">
-      <div class="container">
-        <div class="shopping-list">
+    <main class="background">
+      <section class="container">
+        <section class="shopping-list">
           <div class="input-container">
             <input type="text" placeholder="Назва товару" id="product-name" />
             <button id="add-button">Додати</button>
           </div>
           <hr />
           <ol id="product-list">
-            <div class="item-container">
+            <li class="not-item-container">
               <span class="product-noun" style="text-decoration: line-through"
                 >Помідори</span
               >
+              <button class="minus-button" id="hidden-button">−</button>
               <span class="quantity">2</span>
+              <button class="plus-button" id="hidden-button">−</button>
               <button class="not-status-button">Не куплено</button>
-            </div>
+            </li>
             <hr />
-            <div class="item-container">
+            <li class="item-container">
               <span class="product-noun">Печиво</span>
               <button class="minus-button">−</button>
               <span class="quantity">2</span>
               <button class="plus-button">+</button>
               <button class="status-button">Куплено</button>
               <button class="delete-button">×</button>
-            </div>
+            </li>
             <hr />
-            <div class="item-container">
+            <li class="item-container">
               <input type="text" class="entering-product-noun" value="Сир" />
               <button class="minus-button" data-faded="red-faded">−</button>
               <span class="quantity">1</span>
               <button class="plus-button">+</button>
               <button class="status-button">Куплено</button>
               <button class="delete-button">×</button>
-            </div>
+            </li>
           </ol>
-        </div>
-        <div class="summary">
-          <div class="remaining">
-            <h3>Залишилося</h3>
+        </section>
+        <aside class="summary">
+          <section class="remaining">
+            <h3 id="summary-title">Залишилося</h3>
+            <hr class="seconddiv" />
             <div class="remaining-item">
-              Печиво <span class="quantity">2</span>
+              Печиво <span class="amount">2</span>
             </div>
-            <div class="remaining-item">
-              Сир <span class="quantity">1</span>
-            </div>
-          </div>
-          <div class="purchased">
+            <div class="remaining-item">Сир <span class="amount">1</span></div>
+          </section>
+          <hr class="seconddiv" />
+          <section class="purchased">
             <h3>Куплено</h3>
-            <div class="purchased-item">
-              Помідори <span class="quantity">2</span>
+            <hr class="seconddiv" />
+            <div id="bought-wrapper">
+              <div class="remaining-item">
+                <s>Помідори</s> <span class="amount"><s>2</s></span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </section>
+        </aside>
+        <article class="badge">
+          <aside class="badge-print">
+            Created by<br />
+            <aside class="inside">Oleksandr Zolotaryov🇺🇦</aside>
+          </aside>
+          <section class="badge-content">
+            <header>Buy List</header>
+            <footer class="badge-details">
+              Created by:<br />
+              Oleksandr Zolotaryov
+            </footer>
+          </section>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
