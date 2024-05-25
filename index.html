@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Список покупок</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="ukrainian-flag.svg" type="image/svg+xml" />
   </head>
   <body>
     <main class="background">
@@ -12,12 +13,22 @@
         <section class="shopping-list">
           <div class="input-container">
             <input type="text" placeholder="Назва товару" id="product-name" />
-            <button id="add-button">Додати</button>
+            <button
+              id="add-button"
+              data-tooltip="Натисніть для додавання товару до списку продуктів"
+            >
+              Додати
+            </button>
           </div>
           <hr />
           <ol id="product-list">
             <li class="not-item-container">
-              <span class="product-noun" style="text-decoration: line-through"
+              <span
+                class="product-noun"
+                style="
+                  text-decoration: line-through;
+                  align-content: center;
+                "
                 >Помідори</span
               >
               <button class="minus-button" id="hidden-button">−</button>
@@ -28,20 +39,20 @@
             <hr />
             <li class="item-container">
               <span class="product-noun">Печиво</span>
-              <button class="minus-button">−</button>
+              <button class="minus-button" data-tooltip="Зменшити кількість">−</button>
               <span class="quantity">2</span>
-              <button class="plus-button">+</button>
+              <button class="plus-button" data-tooltip="Збільшити кількість">+</button>
               <button class="status-button">Куплено</button>
-              <button class="delete-button">×</button>
+              <button class="delete-button" data-tooltip="Видалити товар">×</button>
             </li>
             <hr />
             <li class="item-container">
               <input type="text" class="entering-product-noun" value="Сир" />
-              <button class="minus-button" data-faded="red-faded">−</button>
+              <button class="minus-button" data-tooltip="Для зменшення кількості придбайте хоча б 1 одиницю товару" data-faded="red-faded">−</button>
               <span class="quantity">1</span>
-              <button class="plus-button">+</button>
-              <button class="status-button">Куплено</button>
-              <button class="delete-button">×</button>
+              <button class="plus-button" data-tooltip="Збільшити кількість">+</button>
+              <button class="status-button" >Куплено</button>
+              <button class="delete-button" data-tooltip="Видалити товар">×</button>
             </li>
           </ol>
         </section>
