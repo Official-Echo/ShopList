@@ -385,7 +385,7 @@ button+.quantity {
 
 button::after {
 	width: max-content;
-	text-wrap: stable;
+	text-wrap: balance;
 	content: attr(data-tooltip);
 	background-color: #af01da;
 	color: white;
@@ -425,7 +425,7 @@ button[data-tooltip=""]:hover::after {
 	.remaining {
 		padding-left: 0;
 		margin-left: -4px;
-		text-wrap: stable;
+		text-wrap: balance;
 	}
 
 	.shopping-list {
