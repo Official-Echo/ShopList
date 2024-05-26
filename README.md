@@ -19,11 +19,11 @@
 
 1. Склонуйте репозиторій:
     ```bash
-    git clone https://github.com/your-username/shopping-list.git
+    git clone https://github.com/Official-Echo/ShopList.git
     ```
 2. Перейдіть до директорії проєкту:
     ```bash
-    cd shopping-list
+    cd ShopList
     ```
 3. Відкрийте файл `index.html` у вашому браузері.
 
