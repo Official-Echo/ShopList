@@ -28,6 +28,13 @@ body {
 button {
 	user-select: none;
 	-webkit-user-select: none;
+	position: relative;
+}
+
+button:active {
+	transition: transform 0.2s, box-shadow 0.2s;
+	box-shadow: none !important;
+	height: fit-content;
 }
 
 .shopping-list {
@@ -45,7 +52,6 @@ button {
 .input-container {
 	height: max-content;
 	display: flex;
-	align-items: center;
 	max-width: 100%;
 	margin-bottom: 16px;
 }
@@ -240,8 +246,8 @@ button+.quantity {
 	border: none;
 	border-radius: 6px;
 	color: white;
-	min-height: 37px;
-	min-width: 37px;
+	min-height: 35.7333px;
+	min-width: 35.7333px;
 	box-shadow: inset 0 -2.5px #bf2628;
 	font-family: Calibri;
 	font-size: 18px;
@@ -261,6 +267,7 @@ button+.quantity {
 	flex-grow: 2;
 	min-width: 25%;
 	width: 200px;
+	height: fit-content;
 }
 
 .summary>div {
@@ -370,10 +377,6 @@ button+.quantity {
 
 .badge:hover .badge-details {
 	opacity: 1;
-}
-
-button {
-	position: relative;
 }
 
 button::after {
