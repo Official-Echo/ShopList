@@ -1,3 +1,7 @@
+* {
+	scrollbar-gutter: stable;
+}
+
 body {
 	font-family: Arial, sans-serif;
 	background-color: #dadada;
@@ -267,6 +271,7 @@ button+.quantity {
 	min-width: 25%;
 	width: 200px;
 	height: fit-content;
+	scrollbar-gutter: auto;
 }
 
 .summary>div {
@@ -380,7 +385,7 @@ button+.quantity {
 
 button::after {
 	width: max-content;
-	white-space: normal;
+	text-wrap: stable;
 	content: attr(data-tooltip);
 	background-color: #af01da;
 	color: white;
@@ -396,6 +401,7 @@ button::after {
 	pointer-events: none;
 	font-family: Arial, sans-serif;
 	font-weight: normal;
+	max-width: calc(100vw - 40px);
 }
 
 button[data-tooltip]:hover::after {
@@ -428,6 +434,12 @@ button[data-tooltip=""]:hover::after {
 }
 
 @media (max-width: 499px) {
+	button::after {
+		left: auto;
+		right: -17px;
+		transform: none;
+	}
+
 	.container {
 		flex-direction: column;
 	}
