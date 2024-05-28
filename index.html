@@ -23,36 +23,62 @@
           <hr />
           <ol id="product-list">
             <li class="not-item-container">
-              <span
-                class="product-noun"
-                style="
-                  text-decoration: line-through;
-                  align-content: center;
-                "
+              <span class="product-noun" style="text-decoration: line-through"
                 >Помідори</span
               >
               <button class="minus-button" id="hidden-button">−</button>
               <span class="quantity">2</span>
               <button class="plus-button" id="hidden-button">−</button>
-              <button class="not-status-button">Не куплено</button>
+              <button
+                class="not-status-button"
+                data-tooltip="Зміна стану товару на &quotНе куплено&quot"
+              >
+                Не куплено
+              </button>
             </li>
             <hr />
             <li class="item-container">
               <span class="product-noun">Печиво</span>
-              <button class="minus-button" data-tooltip="Зменшити кількість">−</button>
+              <button class="minus-button" data-tooltip="Зменшити кількість">
+                −
+              </button>
               <span class="quantity">2</span>
-              <button class="plus-button" data-tooltip="Збільшити кількість">+</button>
-              <button class="status-button">Куплено</button>
-              <button class="delete-button" data-tooltip="Видалити товар">×</button>
+              <button class="plus-button" data-tooltip="Збільшити кількість">
+                +
+              </button>
+              <button
+                class="status-button"
+                data-tooltip="Зміна стану товару на &quotКуплено&quot"
+              >
+                Куплено
+              </button>
+              <button class="delete-button" data-tooltip="Видалити товар">
+                ×
+              </button>
             </li>
             <hr />
             <li class="item-container">
               <input type="text" class="entering-product-noun" value="Сир" />
-              <button class="minus-button" data-tooltip="Для зменшення кількості придбайте хоча б 1 одиницю товару" data-faded="red-faded">−</button>
+              <button
+                class="minus-button"
+                data-tooltip="Для зменшення кількості придбайте хоча б 1 одиницю товару"
+                data-faded="red-faded"
+              >
+                −
+              </button>
               <span class="quantity">1</span>
-              <button class="plus-button" data-tooltip="Збільшити кількість">+</button>
-              <button class="status-button" >Куплено</button>
-              <button class="delete-button" data-tooltip="Видалити товар">×</button>
+              <button class="plus-button" data-tooltip="Збільшити кількість">
+                +
+              </button>
+              <button
+                class="status-button"
+                data-tooltip="Зміна стану товару на &quotКуплено&quot"
+              >
+                Куплено
+              </button>
+              <button class="delete-button" data-tooltip="Видалити товар">
+                ×
+              </button>
             </li>
           </ol>
         </section>
@@ -60,10 +86,7 @@
           <section class="remaining">
             <h3 id="summary-title">Залишилося</h3>
             <hr class="seconddiv" />
-            <div class="remaining-item">
-              Печиво <span class="amount">2</span>
-            </div>
-            <div class="remaining-item">Сир <span class="amount">1</span></div>
+            <div class="remaining-items-container"></div>
           </section>
           <hr class="seconddiv" />
           <section class="purchased">
@@ -91,5 +114,6 @@
         </article>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
