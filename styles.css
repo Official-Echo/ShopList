@@ -36,7 +36,6 @@ body {
 	width: 100%;
 }
 
-
 button {
 	user-select: none;
 	-webkit-user-select: none;
@@ -456,7 +455,6 @@ button[data-tooltip=""]:hover::after {
 }
 
 @media (max-width: 499px) {
-
 	button::after {
 		left: auto;
 		right: -17px;
